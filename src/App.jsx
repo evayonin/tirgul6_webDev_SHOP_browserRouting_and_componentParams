@@ -1,13 +1,13 @@
 import "./App.css"
-import TodoList from "./components/TodoList.jsx";
-function Counter() {
+import {useState} from "react";
 
+function App() {
 
     return (
         <div>
-         <TodoList/>
+
         </div>
     );
 }
 
-export default Counter;
+export default App;
