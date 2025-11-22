@@ -24,8 +24,8 @@
         setTask(tasks[index])
     }
 
-    const deleteTask =()=>{
-       setTasks(tasks.filter(((task,i) => i !== index)))
+    const deleteTask =(deleteIndex)=>{
+       setTasks(tasks.filter(((task,i) => i !== deleteIndex)))
         setIndex(null)
     }
 
@@ -51,7 +51,7 @@
                                  <li key={index}>
                                      {task}
                                      <button onClick={()=>editTask(index)}>Edit</button>
-                                     <button onClick={deleteTask}>Delete</button>
+                                     <button onClick={()=>deleteTask(index)}>Delete</button>
                                  </li>
                              )
                          }

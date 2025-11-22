@@ -1,5 +1,6 @@
 import "./App.css"
 import {useState} from "react";
+import TodoList from "./components/TodoList.jsx";
 
 function App() {
 const [user, setUser] = useState("");
@@ -27,6 +28,7 @@ const [student,setStudent] = useState({name:"abc",lastname:"gh"});
 
     return (
         <div>
+            <TodoList/>
             {
                 board.map((row,r) => {
                     row.map((col,c)=>{
