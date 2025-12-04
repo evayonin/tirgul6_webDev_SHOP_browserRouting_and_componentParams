@@ -10,6 +10,7 @@ import HomePage from "./components/HomePage.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Product from "./components/Product.jsx";
 
+
 function App() {
    const [products, setProducts] = useState([
        {name:"apple",price:"5",color:"red"},
