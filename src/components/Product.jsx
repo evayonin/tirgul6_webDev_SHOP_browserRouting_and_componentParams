@@ -1,8 +1,14 @@
-function Product({product ,addToCart}){
+// מהתרגיל SHOP - תרגול 6 - 4/12/25
+// שלחת פרמטרים לקומפוננטה / שימוש בהם מבחוץ
+function Product({product ,addToCart}){ // קומפוננטה מהתרגיל shop
+    // יכולנו לשלוח גם סתם (props) וכשקוראים מבחוץ היינו שולחים לקומפוננטה Product שיצרנו פרמטרים ועזרת props.name לדוגמה.
+    // אבל כאן הגדרנו שהקומפוננטה מקבלת אובייקט (סוגריים מסולסלים) ומקבלת מרמטר שנקרא product ומתודה שנקראת addToCart מבחוץ (אלא גם השמות שהשתמשנו בהם בחוץ בעת הקריאה לקומפוננטה - חייב להיות אותו השם!!)
     return(
         <div>
           <h2 style={{color:product.color}}>{product.name} - {product.price} $</h2>
+            {/*יציג את שם המוצר והמחיר שלו לפי הצבע שהוגדר לו. בקיצור, מציג את הפרמטר product לפי הדשות שהוכנסו לו מבחוץ*/}
           <button onClick={()=>addToCart(product)}>add to cart</button>
+            {/*המתודה ששלחנו כפרמטר שתעבור על הproduct ששלחנו כפרמטר לקומפוננטה - הוספת המוצר לסל ע״י לחיצת כפתור*/}
         </div>
     )
 }export default Product;
