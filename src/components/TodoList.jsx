@@ -39,8 +39,9 @@
                  value={task}
                  onChange={(e) => setTask(e.target.value)}
              />
-             <button disabled={task.trim()===""}
-                     onClick={addTask}
+             <button
+                 disabled={task.trim()===""}
+                 onClick={addTask}
              >{index===null?"Add":"Edit"}</button>
 
              {

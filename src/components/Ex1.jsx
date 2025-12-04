@@ -1,4 +1,6 @@
 import {useState} from "react";
+import "./Ex1.css"
+
 
 function Ex1() {
 

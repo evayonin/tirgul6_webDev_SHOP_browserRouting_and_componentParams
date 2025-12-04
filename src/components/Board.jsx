@@ -44,6 +44,9 @@ const checkWin =()=>{
         console.log(board[i][0].value)
         if (board[i][0].value!==""){
             if (board[i][0].value===board[i][1].value && board[i][1].value===board[i][2].value){
+                const newBoard = [...board];
+                newBoard[i][0].color = "green";
+                setBoard(newBoard);
                 return true
             }
         }
@@ -92,7 +95,7 @@ const print=()=>{
                 {board.map((row, r) =>
                     row.map((col, c) => (
                         <div
-                            key={r + "-" + c}
+                            key={r + ":" + c}
                             className="board-cell"
                             style={{ color: col.color }}
                             onClick={() => drawPlayer(r ,c)}
